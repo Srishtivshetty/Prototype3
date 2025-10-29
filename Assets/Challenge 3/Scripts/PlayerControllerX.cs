@@ -50,6 +50,7 @@ public class PlayerControllerX : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Money"))
         {
+            Instantiate(fireworksParticle, transform.position, fireworksParticle.transform.rotation);
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
